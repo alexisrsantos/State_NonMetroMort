@@ -6,8 +6,6 @@ Here I provide the data and code for replicating the findings presented in the d
 ## Data
 All data are state-level and obtained through CDC Wonder. 
 
-State_MRR_RuralPenalty - includes the following variables:
-
 ### Codebook
 
 #### Observation Identifiers
