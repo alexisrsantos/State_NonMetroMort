@@ -25,4 +25,4 @@ I tested on cells where the true rate is known, this lands within about 3% of it
 The status column in the dataset marks each cell as reported, aamr_unreliable or suppressed.
 
 # Are results sensitive?
-I reran the green line with every suppressed cell set to 0 deaths, and then to 9, the two extremes. In 89% of state-years the result changed by less than 1 point on the MRR scale. Only Massachusetts and Utah moved noticeably, because their nonmetro minority populations are very small. This has been recognized in the methods.
+I reran the green line with every suppressed cell set to 0 deaths, and then to 9, the two extremes. In 89% of state-years the result changed by less than 1 point on the MRR scale. Only Massachusetts and Utah moved noticeably, because their nonmetro minority populations are very small. This has been recognized in the methods. For Massachusetts, I only present the observed ratio. 
