@@ -12,20 +12,22 @@ All data are state-level and obtained through CDC Wonder.
 * State - US State
 * Year - Year of Measure
   
-#### Metropolitan Areas
-* Deaths_Metro - Deaths for the Metropolitan Areas
-* Population_Metro - Population Size for Metropolitan Areas
-* CMR_Metro - Crude Mortality Rate for Metropolitan Areas
-* AAMR_Metro - Age-Adjusted Mortality Rate for Metropolitan Areas
-
-#### Nonmetropolitan Areas
-* Deaths_NonMetro - Deaths for the Metropolitan Areas
-* Population_NonMetro - Population Size for Metropolitan Areas
-* CMR_NonMetro - Crude Mortality Rate for Metropolitan Areas
-* AAMR_NonMetro - Age-Adjusted Mortality Rate for Metropolitan Areas
-
+#### Processed file
+* MRR - Morality Rate Ratio 
+* MRR_Lo - Lower bound of the 95% CI for the MRR
+* MRR_Hi - Higher bound of the 95% CI for the MRR
+* MRR_Adj - Mortality Rate Ratio removing effect of racial/ethnic composition
+* MRR_Lo_Adj - Lower bound of the 95% CI for the MRR Adjusted
+* MRR_Hi_Adj - Higher bound of the 95% CI for the MRR Adjusted
+ 
 # Code
 The code included in this repository produced the visualization and supporting tabulations.
+
+# Decomposition 
+Includes the decomposition process, including harmonized data and processing post raw files.
+
+# Raw files
+Includes CDC data extracts used to build data for the decomposition. 
 
 # Correspondence
 For any issue with the functionality of this script please create an issue
