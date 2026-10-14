@@ -1,4 +1,4 @@
-# Examination of state-level nonmetropolitan mortality penalty patterns reveal heterogeneity across the nation, 1999-2016
+# Examination of state-level nonmetropolitan mortality penalty patterns reveal heterogeneity across the nation, 1999-2019
 ## Introduction
 
 Here I provide the data and code for replicating the findings presented in the data visualization that illustrates heterogeneity in the emergence of the nonmetropolitan mortality penalty in the United States.
