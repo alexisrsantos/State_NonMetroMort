@@ -3,22 +3,15 @@ library(ggplot2)
 library(readxl)
 library(datasets)
 
-setwd("C:/Users/ars39/Desktop/") #Set WD to read file from there
+setwd("") #Set WD to read file from there
 
-DataFile <- read_excel("State_Year_1999_2019.xlsx")
+DataFile <- read_excel("State_Year_1999_2019.xlsx") #Read the file
 
-DataFile[DataFile$State == "Massachusetts", c("MRR_Adj", "MRR_Lo_Adj", "MRR_Hi_Adj")] <- NA
+DataFile[DataFile$State == "Massachusetts", c("MRR_Adj", "MRR_Lo_Adj", "MRR_Hi_Adj")] <- NA 
+#Make MA missing in the nonmetropolitan areas
 
-DataFile$STABB<-state.abb[match(DataFile$State, state.name)]
-
-DataFile$STABB<-ifelse(is.na(DataFile$STABB)==TRUE,"DC",DataFile$STABB)
-
-#NGR
-DataFile$STABB<-state.abb[match(DataFile$State, state.name)]
-DataFile$STABB<-ifelse(is.na(DataFile$STABB)==TRUE,"DC",DataFile$STABB)
-
-#Open a Jpg file
-png("rplot.png", width = 1500, height =1000)
+DataFile$STABB<-state.abb[match(DataFile$State, state.name)] #State names match abbreviations
+DataFile$STABB<-ifelse(is.na(DataFile$STABB)==TRUE,"DC",DataFile$STABB) #Confirm DC
 
 #create plot
 ggplot(DataFile, aes(Year, MRR)) +
@@ -40,5 +33,6 @@ ggplot(DataFile, aes(Year, MRR)) +
        subtitle = "Blue line: observed. Green line: ethnoracial composition held equal. Shaded bands: 95% confidence intervals",
        caption="Red line represents equal rates.")
 
-# Close the file
-dev.off()
+#Export 
+ggsave("rplot.png",width=15,height=10, units="in", dpi=300)
+
